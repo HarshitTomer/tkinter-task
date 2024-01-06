@@ -13,7 +13,7 @@ def create_counter(master, title, initial_value):
     paused = False
 
     def update_counter():
-        if not counter_var.get().isdigit() or paused:
+        if paused:
             return
         value = int(counter_var.get())
         value += 2
